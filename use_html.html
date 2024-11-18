@@ -10,13 +10,61 @@
   <meta name="icon" content="HTML">
   <meta name="examples" content="">
   <meta name="metadata" content="
-    <Regra1> Se o desenho/imagem anexados se parece com uma UI, você deve gerar um arquivo HTML dentro da pasta /www nomeado de acordo com o que está sendo pedido. Ex: Se a UI parece um Jogo da Velha, você deve criar o arquivo /www/jogo-da-velha.html </Regra1>
-    <Regra2> Use TailwindCSS para estilização, ao menos que especificado outra coisa. Busque sempre fazer o resultado desejado com o menor número de tokens, sem prejudicar a qualidade </Regra2>
-    <Regra3> Se o desenho/imagem inclui um arquivo que já existe, você deve editar esse arquivo de acordo com o prompt anexado </Regra3>
-    <Regra4> If, and only if, you are creating a new file with write_file, and not editing an existing one, call draw_elements to show the user the preview of the HTML they just created. Below is an example of a preview. { 'type': 'embeddable', 'groupIds': [], 'fillStyle': 'solid', 'strokeWidth': 2, 'strokeStyle': 'solid', 'roughness': 1, 'opacity': 100, 'angle': 0, 'x': 949.4777341479296, 'y': -275.5791467189588, 'strokeColor': '#000000', 'backgroundColor': 'transparent', 'width': 1149.82242474246, 'height': 1277.4089645091767, 'roundness': {'type': 3}, 'link': 'file:///www/jogo-da-velha.html' } </Regra4>
-    <Regra5> Draw the preview at the right of the original prompt, so the user can have the good experience of seeing the new thing they've just created </Regra5>
-    <Regra6> Don't call draw_elements when you'll call edit_code. </Regra6>
-  ">
-</head>
+    <Regra1>
+Se o desenho/imagem anexados se parece com uma UI,
+você dever gerar um arquivo HTML dentro da pasta /www
+nomeado de acordo com o que está sendo pedido.
 
+Ex: Se a UI parece um Jogo da Velha, você deve criar 
+o arquivo /www/jogo-da-velha.html
+</Regra1>
+
+<Regra2>
+Use TailwindCSS para estilização, ao menos que especificado outra coisa. Busque
+sempre fazer o resultado desejado com o menor número de tokens, sem prejudicar
+a qualidade
+</Regra2>
+
+<Regra3>
+Se o desenho/imagem inclui um arquivo que já existe, você deve editar
+esse arquivo de acordo com o prompt anexado
+</Regra3>
+
+<Regra4>
+If, and only if, you are creating a new file with write_file, and not editing an existing one, 
+call draw_elements to show the user the preview of the HTML they just created.
+Below is an example of a preview. 
+{
+      "type": "embeddable",
+      "groupIds": [],
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 949.4777341479296,
+      "y": -275.5791467189588,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 1149.82242474246,
+      "height": 1277.4089645091767,
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [],
+      "link": "file:///www/jogo-da-velha.html",
+    }
+
+The link must point to the name of the create file
+</Regra4>
+<Regra5>
+Draw the preview at the right of the original prompt, 
+so the use can have the good experience of see the new thing 
+they've just created
+</Regra5>
+<Regra6>
+Don't call draw_elements when you'll call edit_code.
+</Regra6>">
+</head>
 </html>
